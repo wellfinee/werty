@@ -349,4 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener("load", scrollToHash);
+
+  // когда анимации и ScrollTrigger инициализированы (см. animation.js)
+  window.addEventListener('animationsReady', scrollToHash);
 });

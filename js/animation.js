@@ -332,6 +332,10 @@ document.fonts.ready.then(() => {
     });
   });
 
+  // все анимации и ScrollTrigger'ы инициализированы
+  ScrollTrigger.refresh();
+  window.dispatchEvent(new Event('animationsReady'));
+
 });
 
 
