@@ -1,0 +1,271 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hide Zone</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Rubik+Vinyl&family=Stalinist+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/adaptive.css">
+
+  <!-- ---------FOR GSAP ANIMATIONS--------- -->
+  <style>
+    .preloader::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--lightgreen-color);
+      width: 100%;
+      height: 56.5vh;
+      transform: translateY(0);
+    }
+
+    .preloader::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: var(--brown-color);
+      width: 100%;
+      height: 43.5vh;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="profile">
+      <a class="btn-steam" id="login" href="http://dev.local:1337/api/auth/steam">
+        Войти через Steam
+      </a>
+    </div>
+
+
+    <button class="header__toggle btn-steam"><i class="fa-solid fa-bars-staggered"></i></button>
+
+    <nav class="header__menu">
+      <li class="header__item">
+        <a href="#about" class="header__link link-anim">О игре</a>
+      </li>
+      <li class="header__item">
+        <a href="#mech" class="header__link link-anim">Механики</a>
+      </li>
+      <li class="header__item">
+        <a href="#screen" class="header__link link-anim">Скриншоты</a>
+      </li>
+      <li class="header__item">
+        <a href="#news" class="header__link link-anim">Новости</a>
+      </li>
+      <h1 class="made-by hidden">Этот сайт создан <br>
+        <a href="#" class="link-anim">Lumen Forge</a> x <a href="#" class="link-anim">WELLFINEE</a>
+      </h1>
+    </nav>
+
+  </header>
+
+  <section class="message">
+    <div class="bg"onclick="closeMessage()"></div>
+    <div class="message__text">
+      <button type="button" onclick="closeMessage()"><i class="fa-solid fa-xmark"></i></button>
+      <h1 id="title"></h1>
+      <h3 id="time"></h3>
+      <span id="text"></span>
+    </div>
+  </section>
+  <section class="preloader">
+    <h1 class="preloader__title title"><a href="/" style="text-decoration: none;">Hide Zone</a></h1>
+
+    <div class="preloader__persons">
+      <img src="assets/images/hunter/run-right/Male_1_Run1.png" alt="Hunter" class="preloader__hunter preloader__image">
+      <img src="assets/images/seeker/crate/item_front.png" alt="Seeker" class="preloader__seeker preloader__image">
+    </div>
+
+    <h6 class="preloader__subtext">Игра в которой вооруженные мужики бегают за ящиками, стульями и другими
+      предметами</h6>
+  </section>
+  <main class="page">
+    <section class="page__item">
+      <div class="firstscreen">
+        <div class="firstscreen__wrapper">
+          <img src="assets/images/layer01.png" alt="decor" class="decor d01">
+          <img src="assets/images/layer02.png" alt="decor" class="decor d02">
+          <img src="assets/images/layer03.png" alt="decor" class="decor d03">
+          <img src="assets/images/layer04.png" alt="decor" class="decor d04">
+        </div>
+        <div class="firstscreen__text">
+          <h1 class="firstscreen__title title"><span class="l01">
+              <pre> </pre>
+            </span> <span class="l02">
+              <pre> </pre>
+            </span></h1>
+          <span class="firstscreen__subtext">
+            Многопользовательская игра в жанре "prop hunt" где один игрок становится охотником, а остальные превращаются
+            в случайные предметы через систему рулетки и прячутся.
+            <div class="firstscreen__ads">
+              <span> Добавь игру в свой список желаний прямо сейчас, чтобы стать одним из первых!</span>
+              <a class="btn-steam" id="login" href="http://dev.local:1337/api/auth/steam">
+                Добавить в список желаний Steam
+              </a>
+            </div>
+          </span>
+
+        </div>
+      </div>
+    </section>
+    <div class="link-manageer" id="about"></div>
+    <section class="page__item about">
+      <img src="assets/images/bloob01.png" alt="bloob" class="about__bloob about__bloob--01">
+      <img src="assets/images/bloob02.png" alt="bloob" class="about__bloob about__bloob--02">
+      <img src="assets/images/bloob03.png" alt="bloob" class="about__bloob about__bloob--03">
+      <img src="assets/images/bloob04.png" alt="bloob" class="about__bloob about__bloob--04">
+      <img src="assets/images/bloob05.png" alt="bloob" class="about__bloob about__bloob--05">
+      <div class="about__text">
+        <h1 class="title">&emsp;Прячься, охоться, выживай — добро пожаловать в мир Hide Zone!</h1>
+        <br>&emsp;
+        Каждая катка — это взрыв веселья, хитрых тактик и неожиданных моментов. Здесь можно затаиться в самом центре
+        карты, устроить дерзкий побег на глазах у врага или наоборот — раскрыть всех хитрецов по одному движению.
+        <br>&emsp;
+        Игра создаётся известным летсплейщиком с аудиторией более 1 000 000 подписчиков на YouTube, который годами играл
+        в
+        Prop Hunt и теперь решил воплотить свою идеальную версию — с ярким стилем, оригинальными картами и живыми
+        обновлениями.
+        <br>
+        <h1 class="title">Ты — предмет. Он — охотник. Кто победит?</h1>
+        <br>
+        &emsp;Присоединяйся сейчас и стань частью комьюнити, где каждая игра — это новая история.
+        Спрятаться или найти — решать тебе.
+      </div>
+    </section>
+    <div class="link-manageer" id="mech"></div>
+    <section class="page__item scroll">
+      <section class="main__scroll">
+        <section class="scroll__side">
+          <img src="assets/images/layer05.png" alt="hunter" class="scroll__hunter h01">
+          <img src="assets/images/layer08.png" alt="bloob" class="scroll__bloob b01">
+          <div class="scroll__text-area ta01">
+            <h1 class="title">Охотник</h1>
+            <span id="mech">Один игрок становится охотником и должен найти всех спрятавшихся игроков за ограниченное
+              время.
+              Используйте оружие и внимательность!</span>
+          </div>
+        </section>
+        <section class="scroll__side">
+          <img src="assets/images/layer06.png" alt="hunter" class="scroll__hunter h02">
+          <img src="assets/images/layer09.png" alt="bloob" class="scroll__bloob b02">
+          <div class="scroll__text-area ta02">
+
+            <h1 class="title">Превращение</h1>
+            <span>Превратитесь в предмет и найдите идеальное место для маскировки. Сливайтесь с окружением и избегайте
+              охотника!</span>
+
+          </div>
+        </section>
+        <section class="scroll__side ss03">
+          <img src="assets/images/layer07.png" alt="hunter" class="scroll__hunter h03">
+          <img src="assets/images/layer10.png" alt="bloob" class="scroll__bloob b03">
+          <div class="scroll__text-area ta03">
+            <h1 class="title">Система рулетки</h1>
+            <span>Остальные игроки получают случайные предметы через рулетку. Каждый предмет имеет разную редкость и
+              сложность маскировки.</span>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="page__item page__item--gallery" id="screen">
+      <h1 class="title block-title">Скриншоты</h1>
+      <div id="gallery" class="gallery"></div>
+      <button id="loadMore" class="load-more btn-steam">Загрузить ещё</button>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <button id="closeBtn" class="close-btn">&times;</button>
+
+          <!-- сюда вставляем имя -->
+          <h2 id="modalName" class="modal-name"></h2>
+
+          <img id="modalImg" class="modal-img" src="" alt="скриншот">
+
+          <!-- и сюда – описание -->
+          <p id="modalDesc" class="modal-desc"></p>
+
+          <button id="prevBtn" class="arrow prev">&#10094;</button>
+          <button id="nextBtn" class="arrow next">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <h1 class="title block-title news__title" id="news">Новости</h1>
+    <div id="announcements" class="news page__item"></div>
+
+    <footer class="footer" id="contact">
+      <section class="footer__quatro fq4"></section>
+      <section class="footer__half fh1">
+        <section class="footer__quatro fq1">
+          <h1 class="footer__title title">Hide Zone</h1>
+          <div>
+            <a class="btn-steam" id="login" href="http://dev.local:1337/api/auth/steam">
+              Войти через Steam
+            </a>
+            <a class="btn-steam" id="login" href="https://store.steampowered.com/app/3720040/Hide_Zone/">
+              Добавить в желаемое
+            </a>
+          </div>
+        </section>
+        <section class="footer__quatro fq2">
+          <div class="footer__tech">
+            <a href="mailto:hidezonesupp@gmail.com" class="title">hidezonesupp@gmail.com</a>
+            <ul class="footer__tech-for">
+              <li>Техническая поддержка</li>
+              <li>Сообщения о багах и ошибках</li>
+              <li>Ваши идеи и предложения</li>
+              <li>Сотрудничество и реклама</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section class="footer__half fh2">
+        <section class="footer__quatro fq3">
+          <ul class="footer__socials">
+            <li class="footer__social"><a href="https://t.me/SodaEffecti" class="footer__link"><i
+                  class="fa-brands fa-telegram"></i></a></li>
+            <li class="footer__social"><a href="https://www.youtube.com/@SodaEffect" class="footer__link"><i
+                  class="fa-brands fa-youtube"></i></a></li>
+            <li class="footer__social"><a href="https://store.steampowered.com/curator/45656777" class="footer__link"><i
+                  class="fa-brands fa-steam"></i></a></li>
+            <li class="footer__social"><a href="https://discord.com/invite/vdhX2fcQaC" class="footer__link"><i
+                  class="fa-brands fa-discord"></i></a></li>
+          </ul>
+        </section>
+
+      </section>
+    </footer>
+
+  </main>
+
+</body>
+<script src="
+https://cdn.jsdelivr.net/npm/lenis@1.3.8/dist/lenis.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/lenis@1.3.8/dist/lenis.min.css
+" rel="stylesheet">
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CSSRulePlugin.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+<script src="https://kit.fontawesome.com/8f446d19ac.js" crossorigin="anonymous"></script>
+<script src="js/screenshots.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/main.js"></script>
+<script src="js/handle.js"></script>
+</html>
